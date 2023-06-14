@@ -45,6 +45,31 @@ barchartGC(~infected + treatment,data=Charlie, type="percent")
 
 ```
 
+
+
+```{r}
+library(ggplot2)
+
+# Assuming "infected" and "treatment" are column names in the data frame "Charlie"
+
+# Bar chart for "infected" variable
+ggplot(Charlie, aes(x = infected, fill = treatment)) +
+  geom_bar(position = "dodge", color = "black") +
+  labs(x = "Infected", y = "Count") +
+  ggtitle("Bar Chart of Infected and Treatment") +
+  scale_fill_manual(values = c("drug" = "blue", "placebo" = "red")) +
+  theme(legend.position = "bottom")
+
+# Bar chart for "treatment" variable
+ggplot(Charlie, aes(x = treatment, fill = treatment)) +
+  geom_bar(position = "dodge", color = "black") +
+  labs(x = "Treatment", y = "Count") +
+  ggtitle("Bar Chart of Treatment") +
+  scale_fill_manual(values = c("drug" = "blue", "placebo" = "red")) +
+  theme(legend.position = "bottom")
+```
+
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
