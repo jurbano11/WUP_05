@@ -45,7 +45,7 @@ barchartGC(~infected + treatment,data=Charlie, type="percent")
 
 ```
 
-
+These two plots show  how people got the disease aids with the use of box plots that measure frequency and percentage. 
 
 ```{r}
 library(ggplot2)
