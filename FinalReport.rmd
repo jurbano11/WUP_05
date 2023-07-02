@@ -87,7 +87,7 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-There is a big difference between that the p value of the drug did not work. This drug is affecting the LGBTQ community the most. Only 25% of the people got the drug while the other 75% did not. Most of the people who got aids took the placebo.
+The probability of getting this result is an extremely low number of .000000423. This extremely small numer tells me that we reject the hypothesis and tells us that the drug works. Small p value shows something is happening.
 
 # Discussion and Conclusion
 
