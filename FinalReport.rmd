@@ -70,10 +70,11 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ```{r}
-table2 <- xtabs(~infected + treatment, data=Charlie)
-rowPerc(table2)
-colPerc(table2)
+table1 <- xtabs(~infected + treatment, data=DRUGUSR)
+rowPerc(table1)
+colPerc(table1)
 ```
+
 
 ## Inferential Results
 
