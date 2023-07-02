@@ -27,6 +27,13 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 
 # Methods
 
+I need to use a filter command form the helper cheat sheet. The filter to get the data out of triUmp that is comprise of drug users. I will proceed to do this in the next set of codes.
+
+
+```{r}
+DRUGUSR<-filter(triUmp,DrugUser== "yes")
+```
+
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
 # Results
@@ -39,35 +46,23 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
-```{r}
-barchartGC(~infected + treatment,data=Charlie)
-barchartGC(~infected + treatment,data=Charlie, type="percent")
-
-```
-
-These two plots show  how people got the disease aids with the use of box plots that measure frequency and percentage. 
+#### Plot barplots ggplot way
 
 ```{r}
-library(ggplot2)
+dd2 <- DRUGUSR %>% group_by(infected,treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
-# Assuming "infected" and "treatment" are column names in the data frame "Charlie"
 
-# Bar chart for "infected" variable
-ggplot(Charlie, aes(x = infected, fill = treatment)) +
-  geom_bar(position = "dodge", color = "black") +
-  labs(x = "Infected", y = "Count") +
-  ggtitle("Bar Chart of Infected and Treatment") +
-  scale_fill_manual(values = c("drug" = "blue", "placebo" = "red")) +
-  theme(legend.position = "bottom")
+# the group_by followed by summarize(count=n())
 
-# Bar chart for "treatment" variable
-ggplot(Charlie, aes(x = treatment, fill = treatment)) +
-  geom_bar(position = "dodge", color = "black") +
-  labs(x = "Treatment", y = "Count") +
-  ggtitle("Bar Chart of Treatment") +
-  scale_fill_manual(values = c("drug" = "blue", "placebo" = "red")) +
-  theme(legend.position = "bottom")
+basicC <- ggplot(dd2,aes(x=infected,y=count,fill=treatment))
+basicC + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC + geom_bar(stat="identity", position = "dodge")
 ```
+
 
 
 ### Numerical Descriptive Results
