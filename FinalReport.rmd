@@ -75,6 +75,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
+Of the people who got AIDS 24.29% have taken the drug 75.71% have taken the placebo. From the people that haven't got anything was 47.59% to 52.41%. This is a sign of a drug that looks like it is working
 
 ## Inferential Results
 
