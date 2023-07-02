@@ -92,3 +92,5 @@ The probability of getting this result is an extremely low number of .000000423.
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+With this project we learned to use the my tricks rmd and the DPLyr. We saw how the drug and the placebo work in getting a positive result for a effective drug. The drug users had a positive result and that means the drug works. The graphical and numerical data proves that. The result of the inferential test confirm the drug works
