@@ -63,7 +63,7 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-
+ The first plot shows how many people got infected. It looks like it is maybe less than 100 people with AIDS. In the %plot it treats both groups in % terms. 25% of people that got AIDS have taken the drugs. 75% of people that got AIDS have got the placebo. It presents that shows the drug is working from getting AIDS. The relationship is 3rd quaters of the people have got the placebo the ration was 50/50 so the drug is preventing those who took it from getting AIDS.
 
 ### Numerical Descriptive Results
 
